@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.*?>
 <?import java.lang.*?>
@@ -13,33 +14,9 @@
 <AnchorPane disable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aeothod.controller.MainController">
 	<!-- TODO Add Nodes -->
 	<children>
-		<Label layoutX="25.0" layoutY="21.0" text="控件示例：" />
+		<Label layoutX="24.0" layoutY="5.0" text="控件示例：" />
 		<Separator layoutY="297.0" prefWidth="1200.0" />
       <Label layoutX="25.0" layoutY="315.0" text="代码示例：" />
-		<TableView fx:id="sfcTableView" editable="true" layoutX="710.0" layoutY="98.0" prefHeight="140.0" prefWidth="200.0">
-			<columns>
-				<TableColumn fx:id="sfcColumn" prefWidth="137.0" text="正在装箱的SFC" />
-				<TableColumn fx:id="delColum" prefWidth="61.0" text="删除" />
-			</columns>
-		</TableView>
-      <Label fx:id="BasicMessage" layoutX="27.0" layoutY="254.0" prefHeight="31.0" prefWidth="1008.0" style="-fx-background-color: #f3f3f3;" />
-      <ProgressIndicator fx:id="loadingProcess" layoutX="973.0" layoutY="67.0" prefHeight="153.0" prefWidth="173.0" />
-      <Label layoutX="32.0" layoutY="231.0" text="信息框(用于全局显示提示信息)：" />
-      <HBox fx:id="inputHbox" layoutX="32.0" layoutY="109.0" prefHeight="31.0" prefWidth="416.0">
-         <children>
-      		<Label prefHeight="20.0" prefWidth="48.0" text="输入框：" />
-      		<!-- 车间作业控制 -->
-      		<TextField fx:id="inputField" maxWidth="120.0">
-               <HBox.margin>
-                  <Insets right="15.0" />
-               </HBox.margin></TextField>
-      		<Label fx:id="colorLabel" prefHeight="23.0" prefWidth="84.0" text="输入框带颜色：" />
-      		<TextField fx:id="colorField" editable="false" maxWidth="120.0" style="-fx-background-color: #ff8c00;" />
-         </children>
-         <padding>
-            <Insets left="10.0" top="5.0" />
-         </padding>
-      </HBox>
       <ScrollPane fx:id="scrollPane" layoutX="36.0" layoutY="337.0" prefHeight="399.0" prefWidth="1137.0">
         <content>
           <AnchorPane fx:id="codePane" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="996.0">
@@ -49,48 +26,7 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <HBox layoutX="29.0" layoutY="47.0" prefHeight="45.0" prefWidth="388.0">
-         <children>
-      		<Label fx:id="stringLabel" prefHeight="22.0" prefWidth="131.0" text="下拉框(字符串类型)：" />
-      		<ChoiceBox fx:id="stringCheckBox" minWidth="40.0">
-      			<items>
-      				<FXCollections fx:factory="observableArrayList">
-      					<String fx:value="*" />
-      					<String fx:value="1000" />
-      					<String fx:value="9031" />
-      				</FXCollections>
-      			</items>
-      		</ChoiceBox>
-      		<Label fx:id="objLabel" prefHeight="24.0" prefWidth="140.0" style="-fx-padding-left: 10px;" text="下拉框(对象类型)：">
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </Label>
-      		<ChoiceBox fx:id="objCheckBox" prefWidth="82.0" />
-         </children>
-         <padding>
-            <Insets left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </HBox>
-      <HBox layoutX="448.0" layoutY="102.0" prefHeight="45.0" prefWidth="228.0">
-         <children>
-      		<Label fx:id="browserLabel" prefHeight="23.0" prefWidth="59.0" text="browser：" />
-      		<TextField fx:id="browserField" maxWidth="120.0">
-               <HBox.margin>
-                  <Insets right="5.0" />
-               </HBox.margin>
-            </TextField>
-            <Button fx:id="wireButton" mnemonicParsing="false" onAction="#wireAction" style="-fx-background-color: #F4F4F4;">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </children>
-         <padding>
-            <Insets left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </HBox>
-      <HBox layoutX="915.0" layoutY="736.0" prefHeight="45.0" prefWidth="241.0">
+      <HBox layoutX="904.0" layoutY="736.0" prefHeight="45.0" prefWidth="241.0">
          <children>
             <Button mnemonicParsing="false" onAction="#copyAction" prefHeight="23.0" prefWidth="78.0" text="复制">
                <HBox.margin>
@@ -103,40 +39,129 @@
             <Insets bottom="20.0" left="20.0" top="20.0" />
          </padding>
       </HBox>
-      <HBox layoutX="442.0" layoutY="47.0" prefHeight="43.0" prefWidth="444.0">
-         <children>
-      		<Label fx:id="dateLabel" prefHeight="22.0" prefWidth="60.0" text="日期控件：" />
-      		<DatePicker fx:id="datePicker" onAction="#dateChange">
-               <HBox.margin>
-                  <Insets right="15.0" />
-               </HBox.margin>
-            </DatePicker>
-      		<Label prefHeight="29.0" prefWidth="84.0" text="日期控件交互：" />
-      
-      
-      		<TextField fx:id="dateConnectField" editable="false" maxWidth="80.0" style="-fx-background-color: #C9C9C9;" />
-         </children>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </HBox>
-      <HBox layoutX="20.0" layoutY="147.0" prefHeight="63.0" prefWidth="260.0">
-         <children>
-      		<CheckBox fx:id="openCheckBox" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" text="设置弹出状态">
-               <HBox.margin>
-                  <Insets right="15.0" />
-               </HBox.margin>
-            </CheckBox>
-      		<Button mnemonicParsing="false" onAction="#newSceenAction" text="弹出新窗口(false)">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </children>
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding>
-      </HBox>
+      <TabPane layoutX="28.0" layoutY="23.0" prefHeight="263.0" prefWidth="1129.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="控件实例1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="53.0" prefWidth="1093.0">
+                     <children>
+                        <HBox layoutX="362.0" layoutY="95.0" prefHeight="45.0" prefWidth="388.0">
+                           <children>
+                        		<Label fx:id="stringLabel" prefHeight="22.0" prefWidth="131.0" text="下拉框(字符串类型)：" />
+                        		<ChoiceBox fx:id="stringCheckBox" minWidth="40.0">
+                        			<items>
+                        				<FXCollections fx:factory="observableArrayList">
+                        					<String fx:value="*" />
+                        					<String fx:value="1000" />
+                        					<String fx:value="9031" />
+                        				</FXCollections>
+                        			</items>
+                        		</ChoiceBox>
+                        		<Label fx:id="objLabel" prefHeight="24.0" prefWidth="140.0" style="-fx-padding-left: 10px;" text="下拉框(对象类型)：">
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </Label>
+                        		<ChoiceBox fx:id="objCheckBox" prefWidth="82.0" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="22.0" layoutY="145.0" prefHeight="63.0" prefWidth="260.0">
+                           <children>
+                        		<CheckBox fx:id="openCheckBox" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" text="设置弹出状态">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                        		<Button mnemonicParsing="false" onAction="#newSceenAction" text="弹出新窗口(false)">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="528.0" layoutY="32.0" prefHeight="43.0" prefWidth="444.0">
+                           <children>
+                        		<Label fx:id="dateLabel" prefHeight="22.0" prefWidth="60.0" text="日期控件：" />
+                        		<DatePicker fx:id="datePicker" onAction="#dateChange">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                        		<Label prefHeight="29.0" prefWidth="84.0" text="日期控件交互：" />
+                        
+                        
+                        		<TextField fx:id="dateConnectField" editable="false" maxWidth="80.0" style="-fx-background-color: #C9C9C9;" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="38.0" layoutY="95.0" prefHeight="45.0" prefWidth="228.0">
+                           <children>
+                        		<Label fx:id="browserLabel" prefHeight="23.0" prefWidth="59.0" text="browser：" />
+                        		<TextField fx:id="browserField" maxWidth="120.0">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="wireButton" mnemonicParsing="false" onAction="#wireAction" style="-fx-background-color: #F4F4F4;">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="inputHbox" layoutX="35.0" layoutY="38.0" prefHeight="31.0" prefWidth="416.0">
+                           <children>
+                        		<Label prefHeight="20.0" prefWidth="48.0" text="输入框：" />
+                        		<!-- 车间作业控制 -->
+                        		<TextField fx:id="inputField" maxWidth="120.0">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </TextField>
+                        		<Label fx:id="colorLabel" prefHeight="23.0" prefWidth="84.0" text="输入框带颜色：" />
+                        		<TextField fx:id="colorField" editable="false" maxWidth="120.0" style="-fx-background-color: #ff8c00;" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="控件实例2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                  		<TableView fx:id="sfcTableView" editable="true" layoutX="226.0" layoutY="14.0" prefHeight="140.0" prefWidth="200.0">
+                  			<columns>
+                  				<TableColumn fx:id="sfcColumn" prefWidth="137.0" text="正在装箱的SFC" />
+                  				<TableColumn fx:id="delColum" prefWidth="61.0" text="删除" />
+                  			</columns>
+                  		</TableView>
+                        <ProgressIndicator fx:id="loadingProcess" layoutX="624.0" layoutY="8.0" prefHeight="153.0" prefWidth="173.0" />
+                        <Label layoutX="28.0" layoutY="163.0" text="信息框(用于全局显示提示信息)：" />
+                        <Label fx:id="BasicMessage" layoutX="28.0" layoutY="184.0" prefHeight="31.0" prefWidth="1008.0" style="-fx-background-color: #008FC0;" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TabPane>
 	</children>
 	<padding>
 		<Insets />
