@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jt.controller.PrintController">
+   <children>
+      <Label layoutX="155.0" layoutY="46.0" text="车间作业控制:" />
+      <TextField fx:id="sfcField" layoutX="249.0" layoutY="42.0" />
+      <TextField fx:id="certificationField" layoutX="544.0" layoutY="42.0" />
+      <Label layoutX="475.0" layoutY="46.0" text="合格证号:" />
+      <Button layoutX="565.0" layoutY="84.0" mnemonicParsing="false" onAction="#printRetrieverAction" text="检索" />
+      <TableView fx:id="tableView" editable="true" layoutX="40.0" layoutY="158.0" prefHeight="445.0" prefWidth="1132.0">
+        <columns>
+          <TableColumn fx:id="M_SFC" prefWidth="81.0" text="车间作业控制" />
+          <TableColumn fx:id="L_ITEM_BATCH" minWidth="7.0" prefWidth="158.0" text="物料批次" />
+            <TableColumn fx:id="L_SFC_JZ" prefWidth="54.0" text="SFC净重" />
+            <TableColumn fx:id="L_SFC_MZ" prefWidth="58.0" text="SFC毛重" />
+            <TableColumn fx:id="L_SFC_ZXPC" prefWidth="58.0" text="装箱批次" />
+            <TableColumn fx:id="L_SFC_HGZH" prefWidth="101.0" text="合格证号" />
+            <TableColumn fx:id="L_SFC_TTM" prefWidth="91.0" text="托条码" />
+            <TableColumn fx:id="L_ITEM_DESC" prefWidth="144.0" text="物料描述" />
+            <TableColumn fx:id="L_SFC_CUSTOM_NAME" prefWidth="110.0" text="客户名称" />
+            <TableColumn fx:id="L_BQ_SPEC" prefWidth="90.0" text="标签规格" />
+            <TableColumn fx:id="L_BQ_MODEL" prefWidth="96.0" text="标签型号" />
+            <TableColumn fx:id="L_STANA" prefWidth="85.0" text="执行标准" />
+        </columns>
+      </TableView>
+      <Button layoutX="373.0" layoutY="655.0" mnemonicParsing="false" onAction="#printTagAction" text="打印小标签" />
+      <Button layoutX="519.0" layoutY="655.0" mnemonicParsing="false" onAction="#printCertiAction" text="打印合格证" />
+      <Button layoutX="673.0" layoutY="655.0" mnemonicParsing="false" onAction="#printBarAction" text="打印托条码" />
+      <Label layoutX="40.0" layoutY="135.0" text="检索列表" />
+      <Separator layoutY="123.0" prefWidth="1200.0" />
+      <Separator layoutY="628.0" prefWidth="1200.0" />
+      <Label fx:id="message" layoutX="73.0" layoutY="13.0" prefHeight="23.0" prefWidth="1062.0" />
+      <ChoiceBox fx:id="tagChoiceBox" layoutX="859.0" layoutY="42.0" prefWidth="82.0" />
+      <Label layoutX="774.0" layoutY="46.0" text="* 标签种类：" />
+   </children>
+</AnchorPane>

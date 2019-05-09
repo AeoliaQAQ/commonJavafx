@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.DatePicker?>
+
+<AnchorPane disable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" prefHeight="800.0" prefWidth="1200.0" visible="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jt.MainController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="65.0" layoutY="60.0" text="站点：" />
+    <ChoiceBox fx:id="site" layoutX="101.0" layoutY="58.0" minWidth="20.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="*" />
+          <String fx:value="1000" />
+          <String fx:value="9031" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="180.0" layoutY="60.0" text="生产日期：" />
+    <DatePicker fx:id="datePicker" layoutX="240.0" layoutY="56.0" />
+    <Label layoutX="450.0" layoutY="60.0" text="财务年份：" />
+    <Label layoutX="620.0" layoutY="60.0" text="标签种类：" />
+    <Label layoutX="943.0" layoutY="60.0" text="打包线：" />
+    <Label layoutX="790.0" layoutY="60.0" text="作业班组：" />
+    <Separator layoutX="0.0" layoutY="120.0" prefWidth="1200.0" />
+    <Separator layoutX="500.0" layoutY="120.0" orientation="VERTICAL" prefHeight="600.0" />
+    <Separator layoutX="0.0" layoutY="720.0" prefWidth="1200.0" />
+    <Separator layoutX="0.0" layoutY="400.0" prefWidth="1200.0" />
+    
+    <TextField id="message" disable="false" editable="true" focusTraversable="true" layoutX="25.0" layoutY="14.0" opacity="0.0" prefWidth="200.0" text="信息控件" visible="true">
+      <rotationAxis>
+        <Point3D />
+      </rotationAxis>
+    </TextField>
+      <TextField editable="false" layoutX="510.0" layoutY="56.0" maxWidth="80.0" />
+      <ChoiceBox fx:id="site1" layoutX="680.0" layoutY="56.0" prefWidth="82.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="国内标签" />
+               <String fx:value="国外标签" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ChoiceBox fx:id="site11" layoutX="850.0" layoutY="56.0" prefWidth="60.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="白班" />
+               <String fx:value="夜班" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <ChoiceBox fx:id="site12" layoutX="991.0" layoutY="56.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="自动打包线资源" />
+               <String fx:value="C17-A-01" />
+               <String fx:value="4号打包线" />
+               <String fx:value="3号打包线" />
+               <String fx:value="2号打包线" />
+               <String fx:value="1号模具卧车右1头" />
+               <String fx:value="1号打包线" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Label layoutX="25.0" layoutY="132.0" text="物料信息：" />
+      <Label layoutX="35.0" layoutY="166.0" text="车间作业控制：" />
+      <Label layoutX="35.0" layoutY="203.0" text="包漆工号：" />
+      <Label layoutX="35.0" layoutY="237.0" text="车型：" />
+      <Label layoutX="35.0" layoutY="276.0" text="物料描述：" />
+      <Label layoutX="35.0" layoutY="310.0" text="标签规格：" />
+      <Label layoutX="35.0" layoutY="344.0" text="标签型号：" />    
+      <Label layoutX="258.0" layoutY="166.0" text="线盘：" />
+      <Label layoutX="258.0" layoutY="203.0" text="生产订单：" />
+      <Label layoutX="258.0" layoutY="237.0" text="销售订单：" />
+      <Label layoutX="258.0" layoutY="276.0" text="客户名称：" />
+      <Label layoutX="258.0" layoutY="310.0" text="执行标准：" />
+      
+      <Label layoutX="530.0" layoutY="132.0" text="过磅信息：" />
+      <Label layoutX="557.0" layoutY="166.0" text="皮重：" />
+      <Label layoutX="557.0" layoutY="203.0" text="毛重：" />
+      <Label layoutX="557.0" layoutY="237.0" text="净重：" />
+      <Label layoutX="557.0" layoutY="276.0" text="单位：" />
+      <Label layoutX="557" layoutY="310.0" text="累计净重：" />
+      <Label layoutX="756.0" layoutY="166.0" text="电子秤：" />
+      <Label layoutX="756.0" layoutY="196.0" text="箱总毛重：" />
+      <Label layoutX="756.0" layoutY="237.0" text="箱总净重：" />      
+      <Label layoutX="756.0" layoutY="276.0" text="累计箱数：" />
+      
+      <Label layoutX="530.0" layoutY="420.0" text="装箱信息：" />
+      <Label layoutX="557.0" layoutY="490.0" text="托条码：" />
+      <Label layoutX="557.0" layoutY="527.0" text="合格证号：" />
+      <Label layoutX="557.0" layoutY="561.0" text="装箱批次：" />
+      <Label layoutX="557.0" layoutY="600.0" text="箱包装数：" />
+      <Label layoutX="557.0" layoutY="634.0" text="是否组托：" />
+      <Label layoutX="557.0" layoutY="668.0" text="物料批次：" />      
+      <Label layoutX="756.0" layoutY="632.0" text="组箱进度：" />
+      <Label layoutX="756.0" layoutY="668.0" text="托包装数：" />      
+      <Label layoutX="954.0" layoutY="632.0" text="组托进度：" />
+      <TextField layoutX="117.0" layoutY="162.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="117.0" layoutY="200.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="117.0" layoutY="233.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="117.0" layoutY="272.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="117.0" layoutY="306.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="117.0" layoutY="348.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="318.0" layoutY="199.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="318.0" layoutY="162.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="318.0" layoutY="233.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="318.0" layoutY="272.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="318.0" layoutY="306.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="620.0" layoutY="306.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="620.0" layoutY="272.0" maxWidth="120.0" />
+      <TextField layoutX="620.0" layoutY="233.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="620.0" layoutY="199.0" maxWidth="120.0" />
+      <TextField layoutX="620.0" layoutY="162.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="816.0" layoutY="272.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="816.0" layoutY="233.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="816.0" layoutY="192.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="816.0" layoutY="162.0" maxWidth="120.0" />
+      <CheckBox layoutX="967.0" layoutY="166.0" mnemonicParsing="false" text="称开关" />
+      <CheckBox layoutX="967.0" layoutY="195.0" mnemonicParsing="false" text="是否自动打印" />
+      <Button layoutX="623.0" layoutY="445.0" mnemonicParsing="false" text="手动结束装箱" />
+      <Button layoutX="746.0" layoutY="445.0" mnemonicParsing="false" text="设置组托信息" />
+      <Button layoutX="880.0" layoutY="445.0" mnemonicParsing="false" text="手动结束组托" />
+      <Button layoutX="1014.0" layoutY="445.0" mnemonicParsing="false" text="修改批次信息" />
+      <TextField editable="false" layoutX="620.0" layoutY="664.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="620.0" layoutY="630.0" maxWidth="120.0" />
+      <TextField layoutX="620.0" layoutY="596.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="620.0" layoutY="557.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="620.0" layoutY="523.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="620.0" layoutY="486.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="816.0" layoutY="664.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="816.0" layoutY="628.0" maxWidth="120.0" />
+      <TextField editable="false" layoutX="1015.0" layoutY="628.0" maxWidth="120.0" />
+      <Button layoutX="178.0" layoutY="676.0" mnemonicParsing="false" text="重打标签" />
+      <Button layoutX="256.0" layoutY="676.0" mnemonicParsing="false" text="拆箱" />
+      <TableView layoutX="65.0" layoutY="442.0" prefHeight="181.0" prefWidth="151.0">
+        <columns>
+          <TableColumn prefWidth="109.0" text="正在装箱的SFC" />
+          <TableColumn prefWidth="41.0" text="删除" />
+        </columns>
+      </TableView>
+      <TableView layoutX="258.0" layoutY="444.0" prefHeight="181.0" prefWidth="186.0">
+         <columns>
+            <TableColumn prefWidth="125.0" text="正在组托的合格证" />
+            <TableColumn prefWidth="60.0" text="删除" />
+         </columns>
+      </TableView>
+  </children>
+  <padding>
+    <Insets />
+  </padding>
+</AnchorPane>

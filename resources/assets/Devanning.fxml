@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxWidth="800.0" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jt.controller.DevanningController">
+   <children>
+      <TableView fx:id="tableView" layoutX="10.0" layoutY="86.0" prefHeight="200.0" prefWidth="800.0">
+        <columns>
+            <TableColumn fx:id="devanCheckBox" prefWidth="29.0">
+               <graphic>
+                  <CheckBox fx:id="graCheckbox" mnemonicParsing="false" />
+               </graphic>
+            </TableColumn>
+          <TableColumn fx:id="rowTableColumn" prefWidth="33.0" text="序号" />
+          <TableColumn fx:id="barCodeTableColumn" prefWidth="126.0" text="托条码" />
+            <TableColumn fx:id="certifiTableColumn" prefWidth="121.0" text="合格证" />
+            <TableColumn fx:id="volumeTableColumn" prefWidth="46.0" text="卷数" />
+            <TableColumn fx:id="standardTableColumn" prefWidth="108.0" text="规格" />
+            <TableColumn fx:id="modelTableColumn" prefWidth="110.0" text="型号" />
+            <TableColumn fx:id="netWeightTableColumn" prefWidth="46.0" text="净重" />
+            <TableColumn fx:id="grossTableColumn" prefWidth="42.0" text="毛重" />
+            <TableColumn fx:id="cerStatusTableColumn" prefWidth="69.0" text="合格证状态" />
+            <TableColumn fx:id="barStatusTableColumn" prefWidth="64.0" text="托条码状态" />
+        </columns>
+      </TableView>
+      <Label layoutX="107.0" layoutY="38.0" text="托条码:" />
+      <TextField fx:id="barCodeField" layoutX="152.0" layoutY="34.0" />
+      <TextField fx:id="certiField" layoutX="430.0" layoutY="34.0" />
+      <Label layoutX="381.0" layoutY="38.0" text="合格证:" />
+      <Button layoutX="286.0" layoutY="331.0" mnemonicParsing="false" onAction="#devanAction" text="删除" />
+      <Button layoutX="410.0" layoutY="331.0" mnemonicParsing="false" onAction="#cancelAction" text="清除" />
+      <Label fx:id="message" layoutX="37.0" layoutY="7.0" prefHeight="15.0" prefWidth="705.0" />
+      <TextField fx:id="hiddenIdField" layoutX="550.0" layoutY="343.0" visible="false" />
+      <ProgressIndicator fx:id="indicator" layoutX="320.0" layoutY="100.0" prefHeight="123.0" prefWidth="121.0" visible="false" />
+   </children>
+</AnchorPane>

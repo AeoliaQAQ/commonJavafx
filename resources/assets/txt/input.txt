@@ -1,0 +1,35 @@
+-声明：
+	@FXML
+	private TextField inputField;// 输入框
+-设置焦点：
+	inputField.requestFocus();
+-焦点事件：
+	inputField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+
+		@Override
+		public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+			if(newValue) {
+				//TODO 如果聚焦
+			}else {
+				//TODO 失去焦点
+			}
+		}
+
+	});
+-键盘事件：
+	inputField.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+		@Override
+		public void handle(KeyEvent event) {
+			// TODO 判断哪个按键
+			if(KeyCode.ENTER==event.getCode()) {//TODO 此处用ENTER举例
+				//TODO
+			}
+		}
+
+	});
+-设置颜色：
+	public static Background backRed = new Background(new BackgroundFill(Color.RED, null, null));// 红色
+	public static Background backOrg = new Background(new BackgroundFill(Color.valueOf("#ff8c00"), null, null));// 橘红色
+	public static Background backGre = new Background(new BackgroundFill(Color.valueOf("#00FF00"), null, null));// 绿色
+	inputField.setBackground(backRed); 

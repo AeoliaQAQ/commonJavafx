@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="settingRoot" prefHeight="200.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jt.controller.SettingController">
+   <children>
+      <TextField fx:id="settingField" layoutX="82.0" layoutY="89.0" prefWidth="300.0" />
+      <Button layoutX="382.0" layoutY="89.0" mnemonicParsing="false" onAction="#settingPing" text="ping" />
+      <Label layoutX="82.0" layoutY="68.0" text="系统服务路径" />
+      <Button layoutX="342.0" layoutY="165.0" mnemonicParsing="false" onAction="#settingSave" text="保存" />
+      <Button layoutX="413.0" layoutY="165.0" mnemonicParsing="false" onAction="#settingCancle" text="取消" />
+      <Separator layoutY="155.0" prefWidth="500.0" />
+      <Label fx:id="message" layoutX="67.0" layoutY="30.0" />
+      <Button layoutX="269.0" layoutY="165.0" mnemonicParsing="false" onAction="#loadingAction" text="载入" />
+   </children>
+</AnchorPane>

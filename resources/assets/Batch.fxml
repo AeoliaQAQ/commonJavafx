@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jt.controller.BatchController">
+   <children>
+      <Label layoutX="37.0" layoutY="59.0" text="装箱序数:" />
+      <TextField fx:id="boxNumberField" layoutX="94.0" layoutY="55.0" />
+      <TextField fx:id="itemField" layoutX="94.0" layoutY="100.0" />
+      <Label layoutX="37.0" layoutY="104.0" text="物料序数:" />
+      <Button layoutX="74.0" layoutY="142.0" mnemonicParsing="false" onAction="#clearAction" text="确定" />
+      <Button layoutX="189.0" layoutY="142.0" mnemonicParsing="false" onAction="#cancelAction" text="取消" />
+      <Label fx:id="errorMessage" layoutX="22.0" layoutY="22.0" prefHeight="15.0" prefWidth="257.0" />
+   </children>
+</AnchorPane>

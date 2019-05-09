@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" maxWidth="396.0" prefHeight="260.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jt.controller.LoginController">
+   <children>
+      <Label layoutX="127.0" layoutY="48.0" text="账户:" />
+      <TextField fx:id="userNameField" layoutX="171.0" layoutY="44.0" />
+      <Label layoutX="127.0" layoutY="95.0" text="密码:" />
+      <PasswordField fx:id="psdField" layoutX="171.0" layoutY="91.0" />
+      <Button layoutX="121.0" layoutY="173.0" mnemonicParsing="false" onAction="#loginInAction" text="登陆" />
+      <Button layoutX="292.0" layoutY="173.0" mnemonicParsing="false" onAction="#cancelAction" text="取消" />
+      <Button layoutX="205.0" layoutY="173.0" mnemonicParsing="false" onAction="#loginOutAction" text="注销" />
+      <Label fx:id="message" layoutX="34.0" layoutY="14.0" prefHeight="23.0" prefWidth="433.0" />
+      <CheckBox fx:id="remenberChockBox" layoutX="127.0" layoutY="130.0" mnemonicParsing="false" text="记住密码" />
+      <ProgressIndicator fx:id="indicator" layoutX="179.0" layoutY="95.0" visible="false" />
+   </children>
+</AnchorPane>
